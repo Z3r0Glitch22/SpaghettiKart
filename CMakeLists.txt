@@ -66,4 +66,4 @@ target_include_directories(SpaghettiKart PRIVATE
 
 else
     message(FATAL_ERROR "This CMakeLists is for iOS build only")
-endif()
+endif(IOS_BUILD)
