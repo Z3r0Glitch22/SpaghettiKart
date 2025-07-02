@@ -59,9 +59,9 @@ target_include_directories(SpaghettiKart PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/ios
 )
     
-    target_link_libraries(SpaghettiKart PRIVATE "-framework UIKit" "-framework Metal" "-framework MetalKit" "-framework Foundation" "-framework GameController")
 
-    # Link your engine C++ code here, example:
-    # target_link_libraries(SpaghettiKart PRIVATE spaghetti_engine)
+
+
+    #target_link_libraries(SpaghettiKart PRIVATE spaghetti_engine)
 
 
