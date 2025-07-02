@@ -48,6 +48,7 @@ set_target_properties(SpaghettiKart PROPERTIES
     MACOSX_BUNDLE TRUE
     XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "com.yourcompany.spaghettikart"
     XCODE_ATTRIBUTE_ENABLE_BITCODE "NO"
+    )
 # Include paths
 target_include_directories(SpaghettiKart PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
