@@ -43,7 +43,8 @@ jobs:
         exit 1
         fi
 
-
+    - name: Rename IPA file
+      run: mv Package.ipa Spaghetti.ipa
     - name: Upload .ipa artifact
       uses: actions/upload-artifact@v4
 
