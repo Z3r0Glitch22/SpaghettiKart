@@ -19,7 +19,15 @@ if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
     XCODE_ATTRIBUTE_DEVELOPMENT_TEAM ""
     XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER com.example.spaghettikart
 )
-
+target_link_libraries(SpaghettiKart PRIVATE
+    "-framework UIKit"
+    "-framework Metal"
+    "-framework MetalKit"
+    "-framework Foundation"
+    "-framework GameController"
+    "-framework QuartzCore"
+    "-framework UniformTypeIdentifiers"
+)
     target_include_directories(SpaghettiKart PRIVATE ios)
     target_link_libraries(SpaghettiKart PRIVATE "-framework UIKit" "-framework Metal" "-framework MetalKit" "-framework Foundation" "-framework GameController")
 
