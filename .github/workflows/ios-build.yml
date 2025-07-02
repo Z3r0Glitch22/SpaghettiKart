@@ -29,7 +29,7 @@ jobs:
       run: |
         cd build
         xcodebuild -scheme SpaghettiKart -configuration Release -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'
-    - name: Package .ipa
+    - name: SpaghettiKart.ipa
       run: |
         mkdir -p Payload
 
@@ -43,8 +43,6 @@ jobs:
         exit 1
         fi
 
-    - name: Rename IPA file
-      run: mv Package.ipa Spaghetti.ipa
     - name: Upload .ipa artifact
       uses: actions/upload-artifact@v4
 
