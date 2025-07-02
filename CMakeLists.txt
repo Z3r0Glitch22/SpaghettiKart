@@ -1,31 +1,22 @@
-cmake_minimum_required(VERSION 3.18)
+cmake_minimum_required(VERSION 3.21)
 project(SpaghettiKart)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_SYSTEM_NAME iOS)
-set(CMAKE_OSX_SYSROOT iphoneos)
-set(CMAKE_OSX_DEPLOYMENT_TARGET "12.0")
-set(CMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH "NO")
+# Enable Objective-C and C++
+enable_language(OBJC)
+enable_language(CXX)
 
-# Source files
-file(GLOB_RECURSE ENGINE_SRC
-    "src/engine/*.c"
-    "src/engine/*.cpp"
-    "src/engine/*.h"
-)
+# Set to iOS Simulator platform
+set(CMAKE_OSX_SYSROOT iphoneos)  # iphoneos for device, iphonesimulator for simulator
+set(CMAKE_OSX_ARCHITECTURES arm64)  # arm64 is supported on M1+ simulator
+set(CMAKE_OSX_DEPLOYMENT_TARGET "14.0")
+set(CMAKE_XCODE_ATTRIBUTE_SUPPORTED_PLATFORMS iphonesimulator)
+set(CMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH YES)
 
-file(GLOB_RECURSE GAME_SRC
-    "src/game/*.c"
-    "src/game/*.cpp"
-    "src/game/*.h"
-)
-
-set(IOS_WRAPPER
-    ios/main_ios.mm
-    ios/ViewController.mm
-    ios/AppDelegate.mm
-    ios/ViewController.h
-    ios/AppDelegate.h
+# Disable code signing
+set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_ALLOWED "NO")
+set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "")
+set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_REQUIRED "NO")
+set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM ""
 )
 
 # Combine all sources
@@ -52,7 +43,11 @@ target_link_libraries(SpaghettiKart
     "-framework Foundation"
     "-framework GameController"
 )
-
+# Set the bundle identifier
+set_target_properties(SpaghettiKart PROPERTIES
+    MACOSX_BUNDLE TRUE
+    XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "com.yourcompany.spaghettikart"
+    XCODE_ATTRIBUTE_ENABLE_BITCODE "NO"
 # Include paths
 target_include_directories(SpaghettiKart PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
