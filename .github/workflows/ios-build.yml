@@ -31,9 +31,18 @@ jobs:
         xcodebuild -scheme SpaghettiKart -configuration Release -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'
     - name: Package .ipa
       run: |
-        mkdir -p Payload/SpaghettiKart.app
-        cp -R build/Release-iphoneos/SpaghettiKart.app Payload/
-        zip -r SpaghettiKart.ipa Payload
+        mkdir -p Payload
+
+        if [ -d build/Release-iphoneos/SpaghettiKart.app ]; then
+        cp -r build/Release-iphoneos/SpaghettiKart.app Payload/
+        elif [ -d build/Release-iphonesimulator/SpaghettiKart.app ]; then
+        cp -r build/Release-iphonesimulator/SpaghettiKart.app Payload/
+        else
+        
+        echo "Error: No built app found."
+        exit 1
+        fi
+
 
     - name: Upload .ipa artifact
       uses: actions/upload-artifact@v4
