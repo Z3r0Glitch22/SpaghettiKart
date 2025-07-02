@@ -64,6 +64,6 @@ target_include_directories(SpaghettiKart PRIVATE
     # Link your engine C++ code here, example:
     # target_link_libraries(SpaghettiKart PRIVATE spaghetti_engine)
 
-else()
+else
     message(FATAL_ERROR "This CMakeLists is for iOS build only")
 endif()
