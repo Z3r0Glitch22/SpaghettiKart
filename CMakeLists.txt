@@ -13,6 +13,10 @@ if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
     )
 
     add_executable(SpaghettiKart ${SPAGHETTIKART_SRC})
+    set_target_properties(SpaghettiKart PROPERTIES
+    XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER com.example.spaghettikart
+)
+
     target_include_directories(SpaghettiKart PRIVATE ios)
     target_link_libraries(SpaghettiKart PRIVATE "-framework UIKit" "-framework Metal" "-framework MetalKit" "-framework Foundation" "-framework GameController")
 
