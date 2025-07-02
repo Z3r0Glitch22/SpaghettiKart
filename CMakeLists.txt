@@ -18,6 +18,16 @@ if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
     XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY ""
     XCODE_ATTRIBUTE_DEVELOPMENT_TEAM ""
     XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER com.example.spaghettikart
+
+    # Automatically gather all C source files in src/engine
+file(GLOB_RECURSE ENGINE_SOURCES src/engine/*.c)
+
+# Add to your iOS target
+target_sources(SpaghettiKart PRIVATE ${ENGINE_SOURCES})
+
+# Include the engine headers
+target_include_directories(SpaghettiKart PRIVATE src/engine)
+
 )
 target_link_libraries(SpaghettiKart PRIVATE
     "-framework UIKit"
