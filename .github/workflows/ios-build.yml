@@ -28,9 +28,8 @@ jobs:
     - name: Build the app with xcodebuild
       run: |
         cd build
-xcodebuild -scheme SpaghettiKart -configuration Release -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'
-
-  - name: Package .ipa
+        xcodebuild -scheme SpaghettiKart -configuration Release -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'
+    - name: Package .ipa
       run: |
         mkdir -p Payload/SpaghettiKart.app
         cp -R build/Release-iphoneos/SpaghettiKart.app Payload/
