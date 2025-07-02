@@ -47,5 +47,5 @@ jobs:
       uses: actions/upload-artifact@v4
 
       with:
-        name: SpaghettiKart-ipa
-        path: SpaghettiKart.ipa
+       name: SpaghettiKart-All-IPAs
+       path: '**/*.ipa'
