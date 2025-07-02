@@ -38,7 +38,13 @@ target_link_libraries(SpaghettiKart PRIVATE
     "-framework QuartzCore"
     "-framework UniformTypeIdentifiers"
 )
-    target_include_directories(SpaghettiKart PRIVATE ios)
+    target_include_directories(SpaghettiKart PRIVATE
+    ios
+    engine
+    game
+    include
+    )
+    
     target_link_libraries(SpaghettiKart PRIVATE "-framework UIKit" "-framework Metal" "-framework MetalKit" "-framework Foundation" "-framework GameController")
 
     # Link your engine C++ code here, example:
