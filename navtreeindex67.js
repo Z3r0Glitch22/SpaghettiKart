@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"structBombKart.html#ab192143b106b00daa2926827c917c448":[11,0,80,5],
+"structBombKart.html#abff650a8965656c8ff1879ddca0cc35a":[11,0,80,0],
 "structBombKart.html#ad7a1a6a174453a96410a6215a746f343":[11,0,80,6],
 "structBombKartSpawn.html":[11,0,81],
 "structBombKartSpawn.html#a2433b7d49cd9dbe30178490a1c5996a0":[11,0,81,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "structEditor_1_1Gizmo_1_1TrackDimensions.html#aebefd4abfc077cb475f03a5787ecb960":[10,0,1,2,0,2],
 "structEditor_1_1Gizmo_1_1TrackDimensions.html#aebefd4abfc077cb475f03a5787ecb960":[11,0,0,2,0,2],
 "structEuAudioCmd.html":[11,0,115],
-"structEuAudioCmd.html#a068bbf2068bc573348dadd447addee28":[11,0,115,2],
-"structEuAudioCmd.html#a3184afa0f4f6c79ebdb11238833aab62":[11,0,115,14],
-"structEuAudioCmd.html#a404f41fbdbf49c38c50a1f1bbcb8e52a":[11,0,115,10]
+"structEuAudioCmd.html#a068bbf2068bc573348dadd447addee28":[11,0,115,2]
 };

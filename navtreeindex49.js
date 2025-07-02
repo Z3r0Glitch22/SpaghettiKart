@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"mk64_8h.html#a5344f2bdca4f9506c40f044e08ea8c98aa11589879ff008cf99b438493894e142":[12,0,2,15,21,22],
+"mk64_8h.html#a5344f2bdca4f9506c40f044e08ea8c98aa1e81e4fe9fc3d41fffdb945abc5d4d7":[12,0,2,15,21,21],
 "mk64_8h.html#a5344f2bdca4f9506c40f044e08ea8c98aa4b82daa92a2c6388ae0dedd6e48b331":[12,0,2,15,21,4],
 "mk64_8h.html#a5344f2bdca4f9506c40f044e08ea8c98aa6970bca9abd16aa3e5dc8c83ed9ffac":[12,0,2,15,21,0],
 "mk64_8h.html#a5344f2bdca4f9506c40f044e08ea8c98aae231593748597efa2fddd103805f4f0":[12,0,2,15,21,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "namespaceMK64.html#ae4736fe317848892094710bc227d24df":[10,0,5,24],
 "namespaceMultiplayer.html":[10,0,6],
 "namespaceSF64.html":[10,0,8],
-"namespaceSF64.html#a1130ee4440f43e7a45454de29f6bc813":[10,0,8,33],
-"namespaceSF64.html#a1130ee4440f43e7a45454de29f6bc813a077393852be20e37026d6281827662f2":[10,0,8,33,0],
-"namespaceSF64.html#a1130ee4440f43e7a45454de29f6bc813a0e6d76b2a9ac18fa3fe3f604d9116b6b":[10,0,8,33,13]
+"namespaceSF64.html#a1130ee4440f43e7a45454de29f6bc813":[10,0,8,33]
 };
